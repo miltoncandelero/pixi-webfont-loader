@@ -1,6 +1,6 @@
 {
   "name": "pixi-webfont-loader",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Webfont loader plugin for PixiJS",
   "source": "src/pixi-webfont-loader.ts",
   "main": "dist/pixi-webfont-loader.cjs.js",
