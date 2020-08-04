@@ -1,0 +1,21 @@
+{
+	"compilerOptions": {
+		"emitDecoratorMetadata": true,
+		"experimentalDecorators": true,
+		"target": "ESNext",
+		"module": "esnext",
+		"moduleResolution": "node",
+		"removeComments": true,
+		"sourceMap": true,
+		"noImplicitAny": true,
+		"outDir": "dist",
+		"declaration": true,
+		"pretty": true,
+	},
+	"exclude": [
+		"node_modules",
+		"dist",
+	],
+	"compileOnSave": false,
+	"baseUrl": "."
+}

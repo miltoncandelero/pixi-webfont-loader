@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'Otsutome_font';
+    src: url('Otsutome_font-Bold.eot');
+    src: url('Otsutome_font-Bold.eot?#iefix') format('embedded-opentype'),
+        url('Otsutome_font-Bold.woff2') format('woff2'),
+        url('Otsutome_font-Bold.woff') format('woff'),
+        url('Otsutome_font-Bold.ttf') format('truetype'),
+        url('Otsutome_font-Bold.svg#Otsutome_font-Bold') format('svg');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+

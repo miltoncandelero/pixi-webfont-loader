@@ -1,0 +1,60 @@
+{
+  "name": "pixi-webfont-loader",
+  "version": "0.1.0",
+  "description": "Webfont loader plugin for PixiJS",
+  "source": "src/pixi-webfont-loader.ts",
+  "main": "dist/pixi-webfont-loader.js",
+  "umd:main": "dist/pixi-webfont-loader.umd.js",
+  "unpkg": "dist/pixi-webfont-loader.umd.js",
+  "module": "dist/pixi-webfont-loader.m.js",
+  "types": "dist/pixi-webfont-loader.d.ts",
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/miltoncandelero/pixi-webfont-loader.git"
+  },
+  "bugs": {
+    "url": "https://github.com/miltoncandelero/pixi-webfont-loader/issues"
+  },
+  "homepage": "https://github.com/miltoncandelero/pixi-webfont-loader",
+  "keywords": [
+    "pixi",
+    "pixi.js",
+    "text",
+    "font",
+    "webfont",
+    "loader",
+    "observer",
+    "plugin",
+    "webgl",
+    "graphics",
+    "render",
+    "2d"
+  ],
+  "author": "Milton Candelero <miltoncandelero@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "fontfaceobserver": "^2.1.0"
+  },
+  "devDependencies": {
+    "@pixi/eslint-config": "^1.0.1",
+    "@types/fontfaceobserver": "^0.0.6",
+    "eslint": "^7.2.0",
+    "install-peers-cli": "^2.2.0",
+    "microbundle": "^0.12.3",
+    "standard-version": "^8.0.2",
+    "typescript": "^3.9.7"
+  },
+  "peerDependencies": {
+    "pixi.js": "^5.0.0"
+  },
+  "scripts": {
+    "prepare": "install-peers",
+    "lint": "eslint src/**/*.ts --fix",
+    "build": "microbundle --name WebfontLoaderPlugin --globals pixi.js=PIXI,fontfaceobserver=FontFaceObserver",
+    "prepublishOnly": "npm run build",
+    "release": "standard-version"
+  }
+}
