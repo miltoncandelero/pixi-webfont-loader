@@ -45,7 +45,6 @@
     "install-peers-cli": "^2.2.0",
     "microbundle": "^0.12.3",
     "pixi.js": "^5.0.0",
-    "standard-version": "^8.0.2",
     "typescript": "^3.9.7"
   },
   "peerDependencies": {
@@ -57,7 +56,6 @@
     "build": "npm run build:lib && npm run build:iife",
     "build:lib": "microbundle --name WebfontLoaderPlugin --globals @pixi/loaders=PIXI,fontfaceobserver=FontFaceObserver",
     "build:iife": "microbundle --no-pkg-main -f iife -o dist/pixi-webfont-loader.js  --name PIXI.WebfontLoaderPlugin --external @pixi/loaders --globals @pixi/loaders=PIXI",
-    "prepublishOnly": "npm run build",
-    "release": "standard-version"
+    "prepublishOnly": "npm run build"
   }
 }

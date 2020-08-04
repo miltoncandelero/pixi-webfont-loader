@@ -1,8 +1,7 @@
 # Changelog
 
-All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
-
-### 0.2.1 (2020-08-04)
+# 0.2.1
+- Missconfigured `standard-version` bumped the version number.
 
 # 0.2.0
 - Changed `peerDependency` from `pixi.js` to `@pixi/loaders`. Improves compatibility with all projects.
