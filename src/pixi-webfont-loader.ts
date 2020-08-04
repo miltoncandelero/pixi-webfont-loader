@@ -1,8 +1,10 @@
-import { LoaderResource, ILoaderPlugin } from 'pixi.js';
-import * as FontFaceObserver from 'fontfaceobserver';
-
+import { LoaderResource, ILoaderPlugin } from '@pixi/loaders';
+import FontFaceObserver from 'fontfaceobserver';
 export default class WebfontLoaderPlugin implements ILoaderPlugin
 {
+    // Export the export
+    public static readonly FontFaceObserver = FontFaceObserver;
+
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     static add(..._params: any[]): any
     {
@@ -129,3 +131,5 @@ export default class WebfontLoaderPlugin implements ILoaderPlugin
         return text.substring(1);
     }
 }
+
+// export { FontFaceObserver } from 'fontfaceobserver';

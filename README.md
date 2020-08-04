@@ -1,12 +1,15 @@
 # pixi-webfont-loader
 
-Add support for webfonts to [PixiJS](https://github.com/GoodBoyDigital/pixi.js)'s Loader.  
-This leverages [FontFaceObserver](https://fontfaceobserver.com/) to make sure the fonts are ready to go when you need it, avoiding ugly unformatted text.
+[![NPM](https://nodei.co/npm/pixi-webfont-loader.png?compact=true)](https://nodei.co/npm/pixi-webfont-loader/)
 
-## Example
+Add support for webfonts to [PixiJS](https://github.com/GoodBoyDigital/pixi.js)'s Loader.  
+This leverages [FontFaceObserver](https://fontfaceobserver.com/) to make sure the fonts are ready to go when you need it, avoiding ugly unformatted text. (it's exposed in `WebfontLoaderPlugin.FontFaceObserver` if you want to use it)
+
+Massive thanks to @bigtimebuddy for his guidance and patience.
+
+## Example 🚀
 
 In the example below, we will load a font from a file and then create two texts in different ways. One manually and one using the created objects in the resource.   
-(This assumes you are using packages. If you are writing raw js you will need to link FontFaceObserver in your html)
 
 ```js
 	//register the webfont plugin into the Loader
@@ -34,14 +37,14 @@ In the example below, we will load a font from a file and then create two texts 
 	//load!
 	Loader.load();
 ```
-## Build instructions
+## Build instructions 🔨
 
 ```
 $ yarn install
 $ yarn build
 ```
 
-## Usage
+## Usage 📝
 
 ### `Loader.registerPlugin(WebfontLoaderPlugin)`
 
@@ -56,16 +59,21 @@ How to add a font:
   * `testString`: FontFaceObserver will use this string to check if your font was loaded. If your font doesn't have Latin characters you will need it, otherwise you will be fine.
   * `timeout`: FontFaceObserver will give up waiting after this many milliseconds to not hang your game. If you ABSOLUTELY. NEED. THEM. FONTS. set it to infinity.
 
-#### I only have a .TTF file, how do I use this?
+#### Can I load directly from google fonts? 🤔
+Yes you can! just find the link to your font and ask the loader to load it.  
+Even if the url looks ugly because you added a lot of formats, we can load it!  
+`Loader.shared.add({ name: "From Google", url: "https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap" });`
+
+
+#### I only have a .TTF file, how do I use this? 😖
 [Transfonter](https://transfonter.org/), [FontSquirrel](https://www.fontsquirrel.com/tools/webfont-generator) and many other websites can convert a regular font into a fully functional Webfont.
 
-#### But where are my loaded fonts?
+#### But where are my loaded fonts? 🔎
 They are there, just trust them! Call upon thee by their family name or font name (check the CSS file you loaded for those) or check the resources object with the name you gave your font in the loader. (When in doubt, `console.log()` stuff. That might give you a hint.)
 
-## Demo
+## Demo ⚡
 Find a way to host the `demo` folder in here, you are a smart person, you can do it!
 
 
-## License
-
+## License ⚖
 MIT, see [LICENSE.md](http://github.com/tleunen/pixi-multistyle-text/blob/master/LICENSE.md) for details.

@@ -4,8 +4,7 @@
 <head>
     <meta charset='utf-8'>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/5.3.2/pixi.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fontfaceobserver/2.1.0/fontfaceobserver.js"></script>
-    <script src="./pixi-webfont-loader.umd.js"></script>
+    <script src="./pixi-webfont-loader.js"></script>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>pixi-webfont-loader demo</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
@@ -17,7 +16,7 @@
         document.body.appendChild(app.view);
 
         //This is the important one right here.
-        PIXI.Loader.registerPlugin(WebfontLoaderPlugin);
+        PIXI.Loader.registerPlugin(PIXI.WebfontLoaderPlugin);
 
         //Now we link the CSS files
         //regular english font
