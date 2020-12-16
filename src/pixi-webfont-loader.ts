@@ -13,7 +13,7 @@ export default class WebfontLoaderPlugin implements ILoaderPlugin
     }
     static use(resource: LoaderResource, next: (...params: any[]) => any): void
     {
-        if (resource.extension !== 'css')
+        if (!resource.extension.endsWith('css'))
         {
             next();
 
