@@ -35,7 +35,7 @@ In the example below, we will load a font from a file and then create two texts 
 	});
 
 	//load!
-	Loader.load();
+	Loader.shared.load();
 ```
 ## Build instructions 🔨
 
