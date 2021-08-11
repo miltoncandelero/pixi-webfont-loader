@@ -1,5 +1,11 @@
 # Changelog
 
+# 1.0.0
+- Removed the FontFaceObserver dependency.
+- Changed tooling from Microbundle to Rollup.
+- Updated a lot of devDependencies
+- Added support for `ttf`, `otf`, `woff`, and `woff2` files.
+
 # 0.2.2
 - Support for `com/css` extension for google fonts. (Thanks Sergaks [#1](https://github.com/miltoncandelero/pixi-webfont-loader/pull/1))
 
