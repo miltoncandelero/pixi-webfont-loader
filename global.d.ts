@@ -14,10 +14,6 @@ declare namespace GlobalMixins {
 		}
 	}
 	interface LoaderResource {
-		styles: {
-			fontFamily:string;
-			fontStyle:string;
-			fontWeight:string
-		}[]
+		styles: Partial<import('@pixi/text').ITextStyle>[]
 	}
 }

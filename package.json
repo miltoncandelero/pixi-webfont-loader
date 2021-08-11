@@ -1,10 +1,10 @@
 {
-  "name": "@pixi/font",
+  "name": "pixi-webfont-loader",
   "version": "0.2.2",
   "description": "Font loader plugin for PixiJS",
-  "main": "./dist/pixi-font-loader.js",
-  "module": "./dist/pixi-font-loader.es.js",
-  "bundle": "./dist/pixi-font-loader.umd.js",
+  "main": "./dist/pixi-webfont-loader.js",
+  "module": "./dist/pixi-webfont-loader.es.js",
+  "bundle": "./dist/pixi-webfont-loader.umd.js",
   "types": "./index.d.ts",
   "namespace": "PIXI.WebfontLoaderPlugin",
   "files": [
@@ -45,6 +45,7 @@
     "@pixi-build-tools/globals": "^1.0.6",
     "@pixi/eslint-config": "^2.0.2",
     "@pixi/loaders": "^6.1.0",
+    "@pixi/text": "^6.1.0",
     "@rollup/plugin-commonjs": "^20.0.0",
     "@rollup/plugin-node-resolve": "^13.0.4",
     "@rollup/plugin-sucrase": "^4.0.0",
@@ -60,7 +61,8 @@
     "typescript": "^4.3.5"
   },
   "peerDependencies": {
-    "@pixi/loaders": "^5.0.0 | ^6.0.0"
+    "@pixi/loaders": "^6.1.0",
+    "@pixi/text": "^6.1.0"
   },
   "scripts": {
     "clean": "rimraf dist compile index.d.ts",

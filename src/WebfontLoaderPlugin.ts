@@ -155,7 +155,7 @@ export default class WebfontLoaderPlugin implements ILoaderPlugin
             fontStyle: resource.metadata?.font?.style,
             fontWeight: resource.metadata?.font?.weight,
             // fontStretch: font.style["font-stretch"], //pixi doesn't know this
-        }];
+        } as any];
 
         // Usually this resolves instantly because we had the buffer in resource.data
         return WebfontLoaderPlugin.waitFont(

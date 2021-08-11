@@ -1,5 +1,8 @@
 import '../global.d.ts';
+import { Loader } from '@pixi/loaders';
 
 import  WebfontLoaderPlugin  from './WebfontLoaderPlugin';
 
-export default WebfontLoaderPlugin;
+Loader.registerPlugin(WebfontLoaderPlugin);
+
+export { WebfontLoaderPlugin };
