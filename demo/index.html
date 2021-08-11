@@ -3,8 +3,8 @@
 
 <head>
     <meta charset='utf-8'>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/5.3.2/pixi.js"></script>
-    <script src="./pixi-webfont-loader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/pixi.js@6.1.1/dist/browser/pixi.js"></script>
+    <script src="./pixi-font-loader.umd.js"></script>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>pixi-webfont-loader demo</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
@@ -16,29 +16,31 @@
         document.body.appendChild(app.view);
 
         //This is the important one right here.
-        PIXI.Loader.registerPlugin(PIXI.WebfontLoaderPlugin);
+        PIXI.Loader.registerPlugin(PIXI.WebfontLoaderPlugin.WebfontLoaderPlugin);
 
         //Now we link the CSS files
         //regular english font
         PIXI.Loader.shared.add({ name: "Normal Stuff", url: "./fonts/eng.css" });
 
+        PIXI.Loader.shared.add({ name: "CoolFont", url: "./fonts/Thickhead.ttf" });
+
         //japanese font, needs special testing string and also since it's heavy lets give it some more time before giving up
-        PIXI.Loader.shared.add({ name: "Non English", url: "./fonts/kana.css", metadata: { testString: "カタカナ", timeout: 10000 } });
+        PIXI.Loader.shared.add({ name: "Non English", url: "./fonts/kana.css", metadata: { font: { testString: "カタカナ", timeout: 3000 } } });
 
         //google font, load from external css! This is external, give it some time
-        PIXI.Loader.shared.add({ name: "From Google", url: "https://fonts.googleapis.com/css2?family=Montserrat", metadata: { timeout: 5000 } });
+        PIXI.Loader.shared.add({ name: "From Google", url: "https://fonts.googleapis.com/css2?family=Montserrat", metadata: { font: { timeout: 5000 } } });
 
         //When fully loaded we will write the text in perfect font!
         PIXI.Loader.shared.onComplete.once(() => {
 
             // Create it by reading the resources
-            const text1 = new PIXI.Text("Lorem ipsum", PIXI.Loader.shared.resources["Normal Stuff"].data[0])
+            const text1 = new PIXI.Text("Lorem ipsum", PIXI.Loader.shared.resources["Normal Stuff"].styles[0])
 
             // Or by hand by naming the font
-            const text2 = new PIXI.Text("dolor sit amet", new PIXI.TextStyle({ fontFamily: "Thickhead", fill: 0x990000 }));
+            const text2 = new PIXI.Text("dolor sit amet", new PIXI.TextStyle({ fontFamily: "CoolFont", fill: 0x990000 }));
 
             // Japanese is working too
-            const text3 = new PIXI.Text("いろはにほへと　ちりぬるを", PIXI.Loader.shared.resources["Non English"].data[0]);
+            const text3 = new PIXI.Text("いろはにほへと　ちりぬるを", PIXI.Loader.shared.resources["Non English"].styles[0]);
 
             // Why not throw in there some google fonts
             const text4 = new PIXI.Text("Good bye", new PIXI.TextStyle({ fontFamily: "Montserrat", fill: 0x990000 }));

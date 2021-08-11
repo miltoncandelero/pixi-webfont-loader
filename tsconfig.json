@@ -2,8 +2,7 @@
 	"compilerOptions": {
 		"emitDecoratorMetadata": true,
 		"experimentalDecorators": true,
-		"target": "ESNext",
-		"module": "esnext",
+		"target": "es6",
 		"moduleResolution": "node",
 		"removeComments": true,
 		"sourceMap": true,
@@ -18,7 +17,8 @@
 		"dist",
 	],
 	"include": [
-		"src/**/*"
+		"src/**/*",
+		"global.d.ts"
 	],
 	"compileOnSave": false,
 }
