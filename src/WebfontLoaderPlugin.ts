@@ -34,7 +34,7 @@ export default class WebfontLoaderPlugin implements ILoaderPlugin
 
     static use(resource: LoaderResource, next: (...params: any[]) => any): void
     {
-        if (resource.extension.endsWith('css'))
+        if (resource.extension.endsWith('css') || resource.extension.endsWith('css2'))
         {
             // this promise _shouldnt_ reject but just to be sure, finally;
             WebfontLoaderPlugin.loadFromCSS(resource).finally(() => next());

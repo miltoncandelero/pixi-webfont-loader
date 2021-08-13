@@ -1,5 +1,8 @@
 # Changelog
 
+# 1.0.1
+- Added support for google's `css2` extension.
+
 # 1.0.0
 - Removed the FontFaceObserver dependency.
 - Changed tooling from Microbundle to Rollup.
