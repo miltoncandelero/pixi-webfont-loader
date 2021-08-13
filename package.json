@@ -6,7 +6,7 @@
   "module": "./dist/pixi-webfont-loader.es.js",
   "bundle": "./dist/pixi-webfont-loader.umd.js",
   "types": "./index.d.ts",
-  "namespace": "PIXI.WebfontLoaderPlugin",
+  "namespace": "PIXI",
   "files": [
     "dist/",
     "index.d.ts",
