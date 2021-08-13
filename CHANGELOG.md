@@ -1,5 +1,8 @@
 # Changelog
 
+# 1.0.2
+- Added prepublish script to not forget to build before publish... again
+
 # 1.0.1
 - Added support for google's `css2` extension.
 
