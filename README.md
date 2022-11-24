@@ -9,6 +9,8 @@ Supported formats: **css**, **ttf**, **otf**, **woff**, and **woff2**!
 
 Massive thanks to @bigtimebuddy and @ivanpopelyshev for his guidance on writing PixiJS plugins.
 
+### This plugin is made for the `Loader` class found on Pixi v6.x. If you are using `Assets` / Pixi v7.x you won't need this plugin.
+
 ## Installation ⚙
 
 ### For bundlers 📦
