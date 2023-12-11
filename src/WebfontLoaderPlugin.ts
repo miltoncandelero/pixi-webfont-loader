@@ -65,13 +65,12 @@ export default class WebfontLoaderPlugin implements ILoaderPlugin
     {
         const fontStyle = fontDescriptor['font-style'] ?? '';
         const fontWeight = fontDescriptor['font-weight'] ?? '';
-        const fontStretch = fontDescriptor['font-stretch'] ?? '';
         const fontFamily = fontDescriptor['font-family'];
 
         timeout = timeout || Infinity; // timeout=0 -> wait forever
         let now = new Date().getTime();
         const backThen = now;
-        const mergedFontStyle:string = [fontStyle, fontWeight, fontStretch, '100px', fontFamily].join(' ');
+        const mergedFontStyle:string = [fontStyle, fontWeight, '100px', fontFamily].join(' ');
         let loadedFonts = 0;
 
         do
